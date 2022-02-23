@@ -13,7 +13,11 @@
     flex-wrap: wrap-reverse; /* wrap | wrap-reverse */
 
     /* FLEX FLOW ( DIRECTION, WRAP ) ---> flex-direction + flex-wrap*/
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
+
+    /* Define la alineación de los elementos hijos, respecto al eje principal */
+    justify-content: space-evenly; /* flex-start | center | flex-end | space-between | space-around | space-evently */
+    
 }
 
 .item {
