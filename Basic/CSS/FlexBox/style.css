@@ -6,7 +6,7 @@
 
 .container {
     background-color: #333;
-    height: 30vh;
+    height: 400px;
     display: flex;
     /* display: inline-flex; */
     flex-direction: row-reverse; /* row | row-reverse | column | column-reverse */
@@ -19,7 +19,7 @@
     justify-content: flex-start; /* flex-start | center | flex-end | space-between | space-around | space-evently */
     
     /*  */
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     /* justify-content: center; */
     align-items: stretch; /* stretch | flex-start | flex-end | center | baseline */
     
@@ -27,10 +27,30 @@
      * NO funciona cuando los hijos están en una sola línea
      * Asemaja a un grupo
     */
-    align-content: stretch;
+    align-content: flex-start;
+    width: 1000px;
 }
 
 .item {
     border: medium solid #999;
     background-color: #666;
+
+    /* Cando la caja flexbox tenga espacio sobrante. Es la habilidad o el factor 
+     * de crecimineto, valor por defecto es 0, NO acepta valores negativos
+    */
+    flex-grow: 1;
+
+    /* Cuando la caja flexbox NO tenga espacio sobrante, es la habilidad de encogerse, 
+     * valor por defecto es 1 No se aceptan valores negativos.
+    */
+    flex-shrink: 1;
+
+    /* Es el tamaño del elemento hijo dentro de la línea de la caja flexbox,
+     * si la caja flexbox tiene dirección de fila, flex-basis representa el with,
+     * si la caja tiene dirección de columna, flex-basis representa el height
+     * su valor por defecto es auto
+    */
+    flex-basis: 100px;
+
+    flex: 0 1 auto; /* flex-grow flex-shrink flex-basis */
 }
