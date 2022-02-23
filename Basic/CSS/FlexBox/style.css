@@ -11,6 +11,9 @@
     /* display: inline-flex; */
     flex-direction: row-reverse; /* row | row-reverse | column | column-reverse */
     flex-wrap: wrap-reverse; /* wrap | wrap-reverse */
+
+    /* FLEX FLOW ( DIRECTION, WRAP ) ---> flex-direction + flex-wrap*/
+    flex-flow: column nowrap;
 }
 
 .item {
