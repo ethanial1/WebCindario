@@ -34,6 +34,7 @@
 .item {
     border: medium solid #999;
     background-color: #666;
+    padding: 20px;
 
     /* Cando la caja flexbox tenga espacio sobrante. Es la habilidad o el factor 
      * de crecimineto, valor por defecto es 0, NO acepta valores negativos
@@ -53,4 +54,29 @@
     flex-basis: 100px;
 
     flex: 0 1 auto; /* flex-grow flex-shrink flex-basis */
+
+    /* ORDEN DE LOS ELEMENTOS */
+
+    /* Representa el orden que tendran los elementos hijos en la caja flexbox 
+     * valor por defecto 0, se aceptan valores positivos y negativos. 
+     * un valor menor siempre irá antes que un valor mayor.
+    */
+    order: 0;
+
+    /* Sobre escribe el valor de la propiedad align-items sólo para el 
+     * elemento hijo especificado 
+    */
+    align-self: stretch; /* strech | flex-start | flex-end | center | baseline */
+}
+
+.item:nth-child(2) {
+    order: -1;
+}
+
+.item:nth-child(3) {
+
+    /* Sobre escribe el valor de la propiedad align-items sólo para el 
+     * elemento hijo especificado 
+    */
+    align-self: center;
 }
